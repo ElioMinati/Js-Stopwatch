@@ -4,17 +4,46 @@
         <meta charset="utf-8">
         <title>Stopwatch</title>
         <link rel="stylesheet" href="style.css"></link>
+        <script type='text/javascript'>
+            let clockInterval;
+            const timeHandler = (currentTime) => {
+                if (currentTime[2] >= 60) {
+                    currentTime[1]++;
+                    currentTime[2] = 0;
+                }
+                if (currentTime[1] >= 60) {
+                    currentTime[0]++;
+                    currentTime[1] = 0;
+                }
+            };
+
+            const updateTime = (currentTime) => {
+                currentTime[2]++;
+                timeHandler(currentTime);
+                document.getElementById('count').innerHTML = `${currentTime[0]}:${currentTime[1]}:${currentTime[2]}`;
+            };
+
+            const startStopWatch = () => {
+                let currentTime = [0, 0, 0];
+                clockInterval = window.setInterval(updateTime, 1000, currentTime);
+            };
+
+            const stopStopWatch = () => {
+                clearInterval(clockInterval);
+            };
+            const resetStopWatch = () => {
+                document.getElementById('count').innerHTML = '00:00:00';
+            }
+        </script>
     </head>
     <body>
         <h1 class="maintitle">Stopwatch</h1>
+        <h2 class="time" id="count">00:00:00</h2>
         <div class="usefullbuttons">
-            <button>Start</button>
-            <button>Stop</button>
-            <button>Reset</button>
+            <button onclick="startStopWatch()">Start</button>
+            <button onclick="stopStopWatch()">Stop</button>
+            <button onclick="resetStopWatch()">Reset</button>
         </div>
         <p class="littletext">Basic javascript stopwatch</p>
-
     </body>
-    <script>
-    </script>
 </html>

@@ -15,19 +15,46 @@ html {
 }
 
 .littletext {
+    position: relative;
+    top: -500px;
     color: whitesmoke;
     text-align: center;
 }
 
 .usefullbuttons  {
     position: relative;
-    top: 400px;
+    top: 10px;
     text-align: center;
 }
 
 button {
-    width: 100px;
-    height: 50px;
+    width: 200px;
+    height: 100px;
     background-color: transparent;
     border: 5px solid black;
+    border-radius: 7px;
+    margin-right: 20px;
+    margin-left: 20px;
+    font-size: 35px;
+    color: whitesmoke;
+}
+
+button:hover {
+    background-color: black;
+    opacity: 0.3;
+    color: whitesmoke;
+}
+
+button:active {
+    opacity: 0.5;
+}
+
+.time {
+    top: 100px;
+    text-shadow: 3px 3px 3px black,
+               6px 6px 3px black;
+    position: relative;
+    color: whitesmoke;
+    font-size: 150px;
+    text-align: center;
 }
