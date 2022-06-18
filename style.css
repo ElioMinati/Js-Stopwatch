@@ -11,7 +11,8 @@ html {
     color: white;
     text-align: center;
     font-size: 100px;
-    -webkit-text-stroke: 1px black;
+    text-shadow: 3px 3px 3px black,
+               6px 6px 3px black;
 }
 
 .littletext {
@@ -19,6 +20,8 @@ html {
     top: -500px;
     color: whitesmoke;
     text-align: center;
+    text-shadow: 1px 1px 1px black,
+               2px 2px 1px black;
 }
 
 .usefullbuttons  {
@@ -37,6 +40,8 @@ button {
     margin-left: 20px;
     font-size: 35px;
     color: whitesmoke;
+    text-shadow: 3px 3px 3px black,
+               6px 6px 3px black;
 }
 
 button:hover {
@@ -57,4 +62,12 @@ button:active {
     color: whitesmoke;
     font-size: 150px;
     text-align: center;
+}
+
+#status {
+    text-shadow: 2px 2px 2px black,
+               4px 4px 2px black;
+    position: relative;
+    top: -430px;
+    font-size: 40px;
 }

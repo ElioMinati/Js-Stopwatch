@@ -22,6 +22,7 @@ const updateTime = (currentTime) => {
 };
 
 const startStopWatch = () => {
+    document.getElementById('status').innerHTML = `Running`;
     clockInterval = window.setInterval(updateTime, 1000, currentTime);
 };
 
@@ -30,6 +31,7 @@ const stopStopWatch = () => {
         alert('Please start the clock first.');
         return;
     }
+    document.getElementById('status').innerHTML = `Paused`;
     clearInterval(clockInterval);
     clockInterval = 0;
 };
@@ -40,5 +42,6 @@ const resetStopWatch = () => {
         clearInterval(clockInterval);
         clockInterval = 0;
     }
+    document.getElementById('status').innerHTML = `Not started`;
     document.getElementById('count').innerHTML = '00:00:00';
 }
