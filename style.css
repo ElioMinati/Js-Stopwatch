@@ -1,0 +1,33 @@
+
+html {
+    min-height: 100%;
+    background-image: linear-gradient(to bottom right, black, grey);
+    background-repeat: no-repeat;
+    font-family: 'Courier New';
+    font-weight: 900;
+}
+
+.maintitle  {
+    color: white;
+    text-align: center;
+    font-size: 100px;
+    -webkit-text-stroke: 1px black;
+}
+
+.littletext {
+    color: whitesmoke;
+    text-align: center;
+}
+
+.usefullbuttons  {
+    position: relative;
+    top: 400px;
+    text-align: center;
+}
+
+button {
+    width: 100px;
+    height: 50px;
+    background-color: transparent;
+    border: 5px solid black;
+}
