@@ -36,6 +36,9 @@ const stopStopWatch = () => {
 
 const resetStopWatch = () => {
     currentTime = [0, 0, 0];
-    stopStopWatch();
+    if (clockInterval) {
+        clearInterval(clockInterval);
+        clockInterval = 0;
+    }
     document.getElementById('count').innerHTML = '00:00:00';
 }
